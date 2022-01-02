@@ -4,7 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "build": "npm run clean && tsc"
   },
   "keywords": [],
   "author": "Kohei Ueno",
