@@ -1,12 +1,12 @@
 import { Point } from './point';
-import { createCompleteTileUrl, createTileGrid, TinyMap } from './TinyMap';
+import { createCompleteTileUrl, createTileGrid, PMap } from './PMap';
 
-describe('TinyMap', () => {
+describe('PMap', () => {
   it('should throw an error if a map container is missing', () => {
     document.body.innerHTML = ``;
-    expect(
-      () => new TinyMap('map', { center: { lat: 0, lng: 0 } })
-    ).toThrowError('map container is missing');
+    expect(() => new PMap('map', { center: { lat: 0, lng: 0 } })).toThrowError(
+      'map container is missing'
+    );
   });
 });
 

@@ -1,1 +1,1 @@
-# Tiny Map
+# Petite Map

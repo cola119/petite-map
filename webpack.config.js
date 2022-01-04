@@ -10,7 +10,7 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'index.js',
     library: {
-      name: 'TinyMap',
+      name: 'PMap',
       type: 'umd',
       export: 'default',
     },

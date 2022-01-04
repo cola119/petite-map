@@ -1,3 +1,3 @@
-import { TinyMap } from './TinyMap';
+import { PMap } from './PMap';
 
-export default TinyMap;
+export default PMap;

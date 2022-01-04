@@ -4,7 +4,7 @@ import { LatLng } from './type';
 
 const osmTileUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 
-export class TinyMap {
+export class PMap {
   private _container: HTMLDivElement;
   private zoom: number;
   private center: LatLng;

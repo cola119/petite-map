@@ -1,7 +1,7 @@
 {
-  "name": "tiny-map",
-  "version": "0.0.1",
-  "description": "",
+  "name": "petite-map",
+  "version": "0.0.0",
+  "description": "Super Tiny JavaScript library for raster maps",
   "main": "dist/index.js",
   "scripts": {
     "clean": "rm -rf dist",
@@ -14,11 +14,29 @@
     "dev": "webpack-dev-server",
     "build": "npm run clean && tsc",
     "bundle": "npm run clean && webpack",
-    "bundle:prod": "npm run clean && NODE_ENV=production webpack"
+    "bundle:prod": "npm run clean && NODE_ENV=production webpack",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
+  "keywords": [
+    "map",
+    "maps",
+    "openstreetmap",
+    "osm"
+  ],
   "author": "Kohei Ueno",
   "license": "MIT",
+  "homepage": "https://github.com/cola119/petite-map",
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts",
+    "package.json",
+    "README.md",
+    "LICENSE.txt"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cola119/petite-map.git"
+  },
   "devDependencies": {
     "@types/jest": "^27.4.0",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
