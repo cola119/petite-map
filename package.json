@@ -1,6 +1,6 @@
 {
   "name": "petite-map",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Super Tiny JavaScript library for raster maps",
   "main": "dist/index.js",
   "scripts": {
