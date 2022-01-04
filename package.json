@@ -12,9 +12,10 @@
     "test:watch": "npm run test -- --watch",
     "code-check": "npm run lint && npm run format && npm run type-check && npm run test",
     "dev": "webpack-dev-server",
-    "build": "npm run clean && tsc",
-    "bundle": "npm run clean && webpack",
-    "bundle:prod": "npm run clean && NODE_ENV=production webpack",
+    "tsc": "tsc",
+    "bundle": "webpack",
+    "bundle:prod": "NODE_ENV=production webpack",
+    "build": "npm run clean && npm run tsc && npm run bundle:prod",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
