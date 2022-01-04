@@ -1,1 +1,3 @@
-console.log('test');
+import { TinyMap } from './TinyMap';
+
+export default TinyMap;

@@ -11,7 +11,10 @@
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "code-check": "npm run lint && npm run format && npm run type-check && npm run test",
-    "build": "npm run clean && tsc"
+    "dev": "webpack-dev-server",
+    "build": "npm run clean && tsc",
+    "bundle": "npm run clean && webpack",
+    "bundle:prod": "npm run clean && NODE_ENV=production webpack"
   },
   "keywords": [],
   "author": "Kohei Ueno",
@@ -25,6 +28,10 @@
     "jest": "^27.4.5",
     "prettier": "^2.5.1",
     "ts-jest": "^27.1.2",
-    "typescript": "^4.5.4"
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.2"
   }
 }

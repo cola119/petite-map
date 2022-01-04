@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Webpack App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script defer="defer" src="index.js"></script>
+    <script>
+      window.onload = () => {
+        var TinyMap = window.TinyMap;
+        var map = new TinyMap('map', {
+          center: { lat: 35.6812, lng: 139.7671 },
+          zoom: 16,
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div id="map" style="width: 90%; height: 500px"></div>
+  </body>
+</html>
