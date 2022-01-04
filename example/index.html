@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Petite Map -->
+    <script src="https://unpkg.com/petite-map@0.0.2/dist/index.umd.js"></script>
+    <!-- Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <script>
+      window.onload = () => {
+        new window.PMap('pmap1', {
+          center: { lat: 35.6812, lng: 139.7671 },
+          zoom: 16,
+        });
+        new window.PMap('pmap2', {
+          center: { lat: 60.1699, lng: 24.9384 },
+          zoom: 10,
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(
+          window.L.map('lmap1', {
+            center: [35.6812, 139.7671],
+            zoom: 16,
+          })
+        );
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(
+          window.L.map('lmap2', {
+            center: [60.1699, 24.9384],
+            zoom: 10,
+          })
+        );
+      };
+    </script>
+    <title>Petite Map Example</title>
+  </head>
+  <body>
+    <section>
+      <h1>Petite Map</h1>
+      <div style="display: flex">
+        <div id="pmap1" style="width: 600px; height: 400px"></div>
+        <div id="pmap2" style="width: 600px; height: 400px"></div>
+      </div>
+    </section>
+    <section>
+      <h1>Leaflet</h1>
+      <div style="display: flex">
+        <div id="lmap1" style="width: 600px; height: 400px"></div>
+        <div id="lmap2" style="width: 600px; height: 400px"></div>
+      </div>
+    </section>
+  </body>
+</html>
